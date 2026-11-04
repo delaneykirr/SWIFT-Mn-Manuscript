@@ -161,7 +161,7 @@ unamended_otu <- otu_matrix[rownames(unamended_meta), , drop = FALSE]
 # Overall PERMANOVA
 adonis2(
   unamended_otu ~ day * redox * water_type,
-  data = amended_meta,
+  data = unamended_meta,
   method = "bray",
   permutations = 999
 )
